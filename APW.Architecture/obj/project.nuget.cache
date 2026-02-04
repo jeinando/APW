@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "TcTuv+ZjpjIMqhwhmuNBAB6lRA2lwNU57MoUQsqSkdYgmlbd9nzsToZnoSyMazSK77m//FORcteNSqmJ67F49g==",
+  "success": true,
+  "projectFilePath": "/home/jacob/APW/APW.Architecture/APW.Architecture.csproj",
+  "expectedPackageFiles": [
+    "/home/jacob/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.22/microsoft.aspnetcore.app.ref.8.0.22.nupkg.sha512"
+  ],
+  "logs": []
+}

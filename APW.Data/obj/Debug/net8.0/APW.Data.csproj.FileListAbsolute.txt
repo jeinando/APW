@@ -1,0 +1,14 @@
+/home/jacob/APW/APW.Data/bin/Debug/net8.0/APW.Data.deps.json
+/home/jacob/APW/APW.Data/bin/Debug/net8.0/APW.Data.runtimeconfig.json
+/home/jacob/APW/APW.Data/bin/Debug/net8.0/APW.Data.dll
+/home/jacob/APW/APW.Data/bin/Debug/net8.0/APW.Data.pdb
+/home/jacob/APW/APW.Data/obj/Debug/net8.0/APW.Data.csproj.AssemblyReference.cache
+/home/jacob/APW/APW.Data/obj/Debug/net8.0/APW.Data.GeneratedMSBuildEditorConfig.editorconfig
+/home/jacob/APW/APW.Data/obj/Debug/net8.0/APW.Data.AssemblyInfoInputs.cache
+/home/jacob/APW/APW.Data/obj/Debug/net8.0/APW.Data.AssemblyInfo.cs
+/home/jacob/APW/APW.Data/obj/Debug/net8.0/APW.Data.csproj.CoreCompileInputs.cache
+/home/jacob/APW/APW.Data/obj/Debug/net8.0/APW.Data.dll
+/home/jacob/APW/APW.Data/obj/Debug/net8.0/refint/APW.Data.dll
+/home/jacob/APW/APW.Data/obj/Debug/net8.0/APW.Data.pdb
+/home/jacob/APW/APW.Data/obj/Debug/net8.0/APW.Data.genruntimeconfig.cache
+/home/jacob/APW/APW.Data/obj/Debug/net8.0/ref/APW.Data.dll
