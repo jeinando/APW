@@ -75,6 +75,7 @@
 /home/jacob/APW/APW.Web/obj/Debug/net8.0/APW.Web.MvcApplicationPartsAssemblyInfo.cache
 /home/jacob/APW/APW.Web/obj/Debug/net8.0/APW.Web.RazorAssemblyInfo.cache
 /home/jacob/APW/APW.Web/obj/Debug/net8.0/APW.Web.RazorAssemblyInfo.cs
+/home/jacob/APW/APW.Web/obj/Debug/net8.0/APW.Web.sourcelink.json
 /home/jacob/APW/APW.Web/obj/Debug/net8.0/staticwebassets.build.json
 /home/jacob/APW/APW.Web/obj/Debug/net8.0/staticwebassets.development.json
 /home/jacob/APW/APW.Web/obj/Debug/net8.0/staticwebassets/msbuild.APW.Web.Microsoft.AspNetCore.StaticWebAssets.props

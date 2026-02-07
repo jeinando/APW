@@ -176,7 +176,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/home/jacob/APW/APW.Models/APW.Models.csproj": {
+                "projectPath": "/home/jacob/APW/APW.Models/APW.Models.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

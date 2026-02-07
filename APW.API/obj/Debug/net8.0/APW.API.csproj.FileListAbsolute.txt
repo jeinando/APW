@@ -133,6 +133,7 @@
 /home/jacob/APW/APW.API/obj/Debug/net8.0/APW.API.csproj.CoreCompileInputs.cache
 /home/jacob/APW/APW.API/obj/Debug/net8.0/APW.API.MvcApplicationPartsAssemblyInfo.cs
 /home/jacob/APW/APW.API/obj/Debug/net8.0/APW.API.MvcApplicationPartsAssemblyInfo.cache
+/home/jacob/APW/APW.API/obj/Debug/net8.0/APW.API.sourcelink.json
 /home/jacob/APW/APW.API/obj/Debug/net8.0/staticwebassets.build.json
 /home/jacob/APW/APW.API/obj/Debug/net8.0/staticwebassets.development.json
 /home/jacob/APW/APW.API/obj/Debug/net8.0/staticwebassets/msbuild.APW.API.Microsoft.AspNetCore.StaticWebAssets.props

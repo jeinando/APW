@@ -1,39 +1,17 @@
-using APW.Data.Models;
-//using APW.Data.Repositories;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-
 namespace APW.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class ProductApiController : ControllerBase
+    public class ProductApiController(ILogger<ProductApiController> logger, IProductBusiness business) : ControllerBase
     {
-        private readonly ProductDbContext _context;
+        private readonly ILogger<ProductApiController> _logger = logger;
 
-        public ProductApiController(ProductDbContext context)
+        
+        public async Task<IEnumerable<Product>> Get()
         {
-            _context = context;
+            _logger.LogInformation("Getting products from ProductApiController");
+            var results = await business.GetProductsAsync();
+            return results;
         }
-
-       [HttpGet(Name = "GetProducts")]
-public async Task<IActionResult> Get()
-{
-    var products = await _context.Products
-        .Include(p => p.Inventory) 
-        .Select(p => new {
-            productId = p.ProductId,
-            productName = p.ProductName,
-            description = p.Description,
-            categoryId = p.CategoryId,
-            rating = p.Rating,
-          
-            unitPrice = p.Inventory != null ? p.Inventory.UnitPrice : 0,
-            unitsInStock = p.Inventory != null ? p.Inventory.UnitsInStock : 0
-        })
-        .ToListAsync();
-
-    return Ok(products);
-}
     }
 }

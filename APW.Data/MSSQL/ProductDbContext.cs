@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-
-namespace APW.Data.Models;
+using APW.Models;
+namespace APW.Data.MSSQL;
 
 public partial class ProductDbContext : DbContext
 {
@@ -29,7 +29,7 @@ public partial class ProductDbContext : DbContext
 
     public virtual DbSet<Supplier> Suppliers { get; set; }
 
-    public virtual DbSet<Task> Tasks { get; set; }
+    public virtual DbSet<Models.Task> Tasks { get; set; }
 
     public virtual DbSet<User> Users { get; set; }
 
@@ -151,7 +151,7 @@ public partial class ProductDbContext : DbContext
             entity.Property(e => e.SupplierName).HasMaxLength(255);
         });
 
-        modelBuilder.Entity<Task>(entity =>
+        modelBuilder.Entity<APW.Models.Task>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__Tasks__3214EC07C7ED59B0");
 

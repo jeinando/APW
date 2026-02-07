@@ -1479,6 +1479,16 @@
             "rid": "win"
           }
         }
+      },
+      "APW.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/APW.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/APW.Models.dll": {}
+        }
       }
     }
   },
@@ -3955,10 +3965,16 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "APW.Models/1.0.0": {
+      "type": "project",
+      "path": "../APW.Models/APW.Models.csproj",
+      "msbuildProject": "../APW.Models/APW.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "APW.Models >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 8.*",
       "Microsoft.EntityFrameworkCore.Design >= 8.*",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.*"
@@ -3988,7 +4004,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/jacob/APW/APW.Models/APW.Models.csproj": {
+              "projectPath": "/home/jacob/APW/APW.Models/APW.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

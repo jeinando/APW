@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("APW.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5091962e0959c7b83654107b247b5f5a1d87701e")]
 [assembly: System.Reflection.AssemblyProductAttribute("APW.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("APW.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

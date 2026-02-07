@@ -8,6 +8,7 @@
 /home/jacob/APW/APW.Architecture/obj/Debug/net8.0/APW.Architecture.AssemblyInfoInputs.cache
 /home/jacob/APW/APW.Architecture/obj/Debug/net8.0/APW.Architecture.AssemblyInfo.cs
 /home/jacob/APW/APW.Architecture/obj/Debug/net8.0/APW.Architecture.csproj.CoreCompileInputs.cache
+/home/jacob/APW/APW.Architecture/obj/Debug/net8.0/APW.Architecture.sourcelink.json
 /home/jacob/APW/APW.Architecture/obj/Debug/net8.0/APW.Architecture.csproj.CopyComplete
 /home/jacob/APW/APW.Architecture/obj/Debug/net8.0/APW.Architecture.dll
 /home/jacob/APW/APW.Architecture/obj/Debug/net8.0/refint/APW.Architecture.dll

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace APW.Data.Models;
+namespace APW.Models;
 
 public partial class Category
 {
