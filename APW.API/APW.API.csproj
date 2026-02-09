@@ -19,6 +19,7 @@
     <ProjectReference Include="..\APW.Models\APW.Models.csproj" />
     <ProjectReference Include="..\APW.Architecture\APW.Architecture.csproj" />
     <ProjectReference Include="..\APW.Data\APW.Data.csproj" />
+    <ProjectReference Include="..\APW.Business\APW.Business.csproj" />
   </ItemGroup>
 
 </Project>

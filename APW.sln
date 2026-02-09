@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APW.Web", "APW.Web\APW.Web.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APW.Data", "APW.Data\APW.Data.csproj", "{3683419A-579C-41C7-8D17-B04CA1FBBCDB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APW.Business", "APW.Business\APW.Business.csproj", "{893CDCFE-B6DD-4DFD-B42D-B59187E7474C}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -89,5 +91,17 @@ Global
 		{3683419A-579C-41C7-8D17-B04CA1FBBCDB}.Release|x64.Build.0 = Release|Any CPU
 		{3683419A-579C-41C7-8D17-B04CA1FBBCDB}.Release|x86.ActiveCfg = Release|Any CPU
 		{3683419A-579C-41C7-8D17-B04CA1FBBCDB}.Release|x86.Build.0 = Release|Any CPU
+		{893CDCFE-B6DD-4DFD-B42D-B59187E7474C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{893CDCFE-B6DD-4DFD-B42D-B59187E7474C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{893CDCFE-B6DD-4DFD-B42D-B59187E7474C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{893CDCFE-B6DD-4DFD-B42D-B59187E7474C}.Debug|x64.Build.0 = Debug|Any CPU
+		{893CDCFE-B6DD-4DFD-B42D-B59187E7474C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{893CDCFE-B6DD-4DFD-B42D-B59187E7474C}.Debug|x86.Build.0 = Debug|Any CPU
+		{893CDCFE-B6DD-4DFD-B42D-B59187E7474C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{893CDCFE-B6DD-4DFD-B42D-B59187E7474C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{893CDCFE-B6DD-4DFD-B42D-B59187E7474C}.Release|x64.ActiveCfg = Release|Any CPU
+		{893CDCFE-B6DD-4DFD-B42D-B59187E7474C}.Release|x64.Build.0 = Release|Any CPU
+		{893CDCFE-B6DD-4DFD-B42D-B59187E7474C}.Release|x86.ActiveCfg = Release|Any CPU
+		{893CDCFE-B6DD-4DFD-B42D-B59187E7474C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

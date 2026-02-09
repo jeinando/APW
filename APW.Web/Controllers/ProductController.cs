@@ -20,12 +20,8 @@ namespace APW.Web.Controllers
 
         public async Task<IActionResult> Index()
         {
-            
-            var data = await _serviceProvider.GetDataAsync<IEnumerable<ProductViewModel>>("http://127.0.0.1:5033/ProductApi");
+            var data = await _serviceProvider.GetDataAsync<IEnumerable<ProductViewModel>>("https://localhost:7159/ProductApi");
             return View(data);
         }
     }
 }
-
-
-

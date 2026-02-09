@@ -1,6 +1,0 @@
-/home/jacob/APW/APW.Data/obj/Debug/net8.0/APW.Data.csproj.AssemblyReference.cache
-/home/jacob/APW/APW.Data/obj/Debug/net8.0/APW.Data.GeneratedMSBuildEditorConfig.editorconfig
-/home/jacob/APW/APW.Data/obj/Debug/net8.0/APW.Data.AssemblyInfoInputs.cache
-/home/jacob/APW/APW.Data/obj/Debug/net8.0/APW.Data.AssemblyInfo.cs
-/home/jacob/APW/APW.Data/obj/Debug/net8.0/APW.Data.csproj.CoreCompileInputs.cache
-/home/jacob/APW/APW.Data/obj/Debug/net8.0/APW.Data.sourcelink.json

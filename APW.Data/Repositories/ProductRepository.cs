@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace APW.Data.Repositories
 {
- public interface IRepositoryProduct
+ public interface IProductRepository
 {
     Task<bool> UpsertAsync(Product entity, bool isUpdating);
     Task<bool> CreateAsync(Product entity);
@@ -19,9 +19,9 @@ namespace APW.Data.Repositories
     
 }
 
-   public class RepositoryProduct : RepositoryBase<Product>, IRepositoryProduct
+   public class ProductReposiitory : RepositoryBase<Product>, IProductRepository
 {
-    public RepositoryProduct(ProductDbContext context) : base(context)
+    public ProductReposiitory(ProductDbContext context) : base(context)
     {
     }
 

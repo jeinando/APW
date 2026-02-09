@@ -1,11 +1,10 @@
-using APW.Models;
+
 using APW.Data.MSSQL;
-using Microsoft.EntityFrameworkCore;
+using APW.Models;
 
+namespace APW.Data.Repositories;
 
-namespace APW.Data.Repositories
-{
- public interface IRepositoryCategory
+public interface ICategoryRepository
 {
     Task<bool> UpsertAsync(Category entity, bool isUpdating);
     Task<bool> CreateAsync(Category entity);
@@ -15,30 +14,8 @@ namespace APW.Data.Repositories
     Task<bool> UpdateAsync(Category entity);
     Task<bool> UpdateManyAsync(IEnumerable<Category> entities);
     Task<bool> ExistsAsync(Category entity);
-    Task<bool> CheckBeforeSavingAsync(Category entity);
-    
 }
 
-   public class RepositoryCategory : RepositoryBase<Category>, IRepositoryCategory
+public class CategoryRepository(ProductDbContext context) : RepositoryBase<Category>(context), ICategoryRepository
 {
-    public RepositoryCategory(ProductDbContext context) : base(context)
-    {
-    }
-
-    public async Task<bool> CheckBeforeSavingAsync(Category entity)
-    {
-        var exists = await ExistsAsync(entity);
-        if (exists)
-        {
-            // algo mas
-        }
-
-        return await UpsertAsync(entity, exists);
-    }
-
-    public async new Task<bool> ExistsAsync(Category entity)
-    {
-        return await DbContext.Categories.AnyAsync(x => x.CategoryId == entity.CategoryId);
-    }
-}
 }

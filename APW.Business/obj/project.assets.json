@@ -996,21 +996,6 @@
           "bin/placeholder/APW.Architecture.dll": {}
         }
       },
-      "APW.Business/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "APW.Architecture": "1.0.0",
-          "APW.Data": "1.0.0",
-          "APW.Models": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/APW.Business.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/APW.Business.dll": {}
-        }
-      },
       "APW.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -2762,11 +2747,6 @@
       "path": "../APW.Architecture/APW.Architecture.csproj",
       "msbuildProject": "../APW.Architecture/APW.Architecture.csproj"
     },
-    "APW.Business/1.0.0": {
-      "type": "project",
-      "path": "../APW.Business/APW.Business.csproj",
-      "msbuildProject": "../APW.Business/APW.Business.csproj"
-    },
     "APW.Data/1.0.0": {
       "type": "project",
       "path": "../APW.Data/APW.Data.csproj",
@@ -2781,7 +2761,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "APW.Architecture >= 1.0.0",
-      "APW.Business >= 1.0.0",
+      "APW.Data >= 1.0.0",
       "APW.Models >= 1.0.0"
     ]
   },
@@ -2791,11 +2771,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/jacob/APW/APW.Web/APW.Web.csproj",
-      "projectName": "APW.Web",
-      "projectPath": "/home/jacob/APW/APW.Web/APW.Web.csproj",
+      "projectUniqueName": "/home/jacob/APW/APW.Business/APW.Business.csproj",
+      "projectName": "APW.Business",
+      "projectPath": "/home/jacob/APW/APW.Business/APW.Business.csproj",
       "packagesPath": "/home/jacob/.nuget/packages/",
-      "outputPath": "/home/jacob/APW/APW.Web/obj/",
+      "outputPath": "/home/jacob/APW/APW.Business/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/jacob/.nuget/NuGet/NuGet.Config"
@@ -2813,8 +2793,8 @@
             "/home/jacob/APW/APW.Architecture/APW.Architecture.csproj": {
               "projectPath": "/home/jacob/APW/APW.Architecture/APW.Architecture.csproj"
             },
-            "/home/jacob/APW/APW.Business/APW.Business.csproj": {
-              "projectPath": "/home/jacob/APW/APW.Business/APW.Business.csproj"
+            "/home/jacob/APW/APW.Data/APW.Data.csproj": {
+              "projectPath": "/home/jacob/APW/APW.Data/APW.Data.csproj"
             },
             "/home/jacob/APW/APW.Models/APW.Models.csproj": {
               "projectPath": "/home/jacob/APW/APW.Models/APW.Models.csproj"
@@ -2849,9 +2829,6 @@
           }
         ],
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
