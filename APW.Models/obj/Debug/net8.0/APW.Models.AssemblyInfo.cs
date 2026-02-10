@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("APW.Models")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+31797cddd644fe85d410f8074fd840e2ad989d75")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+db3d4fe76da943fb3819da32411c045c7006d236")]
 [assembly: System.Reflection.AssemblyProductAttribute("APW.Models")]
 [assembly: System.Reflection.AssemblyTitleAttribute("APW.Models")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

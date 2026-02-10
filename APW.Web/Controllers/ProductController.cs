@@ -1,4 +1,5 @@
 using APW.Architecture;
+using APW.Models;
 using APW.Web.Models;
 using APW.Web.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -20,7 +21,7 @@ namespace APW.Web.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var data = await _serviceProvider.GetDataAsync<IEnumerable<ProductViewModel>>("https://localhost:7159/ProductApi");
+            var data = await _serviceProvider.GetDataAsync<IEnumerable<ComplexObject>>("http://localhost:5033/ProductApi");
             return View(data);
         }
     }

@@ -19,9 +19,9 @@ namespace APW.Data.Repositories
     
 }
 
-   public class ProductReposiitory : RepositoryBase<Product>, IProductRepository
+   public class ProductRepository : RepositoryBase<Product>, IProductRepository
 {
-    public ProductReposiitory(ProductDbContext context) : base(context)
+    public ProductRepository(ProductDbContext context) : base(context)
     {
     }
 

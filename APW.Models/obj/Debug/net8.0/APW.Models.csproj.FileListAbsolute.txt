@@ -1,0 +1,12 @@
+/home/jacob/APW/APW.Models/bin/Debug/net8.0/APW.Models.deps.json
+/home/jacob/APW/APW.Models/bin/Debug/net8.0/APW.Models.dll
+/home/jacob/APW/APW.Models/bin/Debug/net8.0/APW.Models.pdb
+/home/jacob/APW/APW.Models/obj/Debug/net8.0/APW.Models.GeneratedMSBuildEditorConfig.editorconfig
+/home/jacob/APW/APW.Models/obj/Debug/net8.0/APW.Models.AssemblyInfoInputs.cache
+/home/jacob/APW/APW.Models/obj/Debug/net8.0/APW.Models.AssemblyInfo.cs
+/home/jacob/APW/APW.Models/obj/Debug/net8.0/APW.Models.csproj.CoreCompileInputs.cache
+/home/jacob/APW/APW.Models/obj/Debug/net8.0/APW.Models.sourcelink.json
+/home/jacob/APW/APW.Models/obj/Debug/net8.0/APW.Models.dll
+/home/jacob/APW/APW.Models/obj/Debug/net8.0/refint/APW.Models.dll
+/home/jacob/APW/APW.Models/obj/Debug/net8.0/APW.Models.pdb
+/home/jacob/APW/APW.Models/obj/Debug/net8.0/ref/APW.Models.dll

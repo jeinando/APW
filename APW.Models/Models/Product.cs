@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using APW.Models.Entities;
 
 namespace APW.Models;
 
-public partial class Product
+public partial class Product : IEntity
 {
     public int ProductId { get; set; }
 

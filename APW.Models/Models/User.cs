@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using APW.Models.Entities;
 
 
 namespace APW.Models;
 
-public partial class User
+public partial class User : IEntity
 {
     public int UserId { get; set; }
 

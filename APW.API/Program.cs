@@ -1,11 +1,9 @@
+using APW.Business;
 using APW.Data.MSSQL;
-
-
-
- using Microsoft.EntityFrameworkCore;
+using APW.Data.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
-
 
 var connectionString = "Server=localhost,1433;Database=ProductDB;User Id=sa;Password=*APW1234;TrustServerCertificate=True;";
 
@@ -16,6 +14,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// REGISTRO DE DEPENDENCIAS
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IProductBusiness, ProductBusiness>();
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -24,9 +26,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-
-app.UseHttpsRedirection(); 
-
+app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
 
