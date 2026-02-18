@@ -1,9 +1,11 @@
 using APW.Architecture;
+using APW.Architecture.Providers;
 using APW.Models;
 using APW.Web.Models;
 using APW.Web.Services;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace APW.Web.Controllers
@@ -21,8 +23,10 @@ namespace APW.Web.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var data = await _serviceProvider.GetDataAsync<IEnumerable<ComplexObject>>("http://localhost:5033/ProductApi");
-            return View(data);
+            var data = await _serviceProvider.GetDataAsync<ComplexObject>("http://localhost:5033/ProductApi") as ComplexObject;
+            var content = JsonProvider.Serialize(data.Entities);
+            var result = JsonProvider.DeserializeSimple<IEnumerable<ProductViewModel>>(content);
+            return View(result);
         }
     }
 }

@@ -1,126 +1,50 @@
-﻿@using APW.Web.Models
-@model IEnumerable<ProductViewModel>
-
+﻿@model IEnumerable<ProductViewModel>
 @{
-    ViewData["Title"] = "Catálogo de Productos";
-    var listaProductos = Model.ToList();
-    int i = 0;
-    int maximoMostrar = 10;
+    ViewData["Title"] = "Product Page";
 }
-
-@functions {
-    public string EvaluarPrecio(decimal precio)
-    {
-        if (precio > 100)
-        {
-            return "Producto Caro (Premium)";
-        }
-        else if (precio > 50)
-        {
-            return "Precio Moderado";
-        }
-        else
-        {
-            return "Precio Económico";
-        }
-    }
-
-    public string GetBadgeColor(int? categoryId)
-    {
-        return categoryId switch
-        {
-            1 => "bg-primary",
-            5 => "bg-success",
-            12 => "bg-info",
-            _ => "bg-secondary"
-        };
-    }
-}
-
-<div class="container mt-4">
-    <div class="text-center mb-5">
-        <h1 class="display-4">@ViewData["Title"]</h1>
-        <p class="lead">Gestión de Inventario - APW</p>
+ 
+<div class="row">
+    <div class="col-3">
+        <div class="product-item">
+           ID
+        </div>
     </div>
-
-    @if (!Model.Any())
-    {
-        <div class="alert alert-warning text-center">
-            <p>No se encontraron productos. Verifica que la API esté corriendo.</p>
+    <div class="col-3">
+        <div class="product-item">
+            Name
         </div>
-    }
-    else
-    {
-        <div class="row">
-            @foreach (var product in Model)
-            {
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm border-primary">
-                        <div class="card-body">
-                            <h5 class="card-title text-primary">@product.Name</h5>
-                            
-                            <div class="mb-2">
-                                @switch (product.CategoryId)
-                                {
-                                    case 1:
-                                        <span class="badge @GetBadgeColor(1)">Bebidas</span>
-                                        break;
-                                    case 5:
-                                        <span class="badge @GetBadgeColor(5)">Electrónica</span>
-                                        break;
-                                    default:
-                                        <span class="badge @GetBadgeColor(product.CategoryId)">General</span>
-                                        break;
-                                }
-                            </div>
-
-                            <p class="card-text text-muted">@product.Description</p>
-                            <hr />
-                            <p class="mb-1"><strong>Estado:</strong> @EvaluarPrecio(product.Price)</p>
-                            <p class="mb-1"><strong>Precio:</strong> @product.Price.ToString("C")</p>
-                            <p class="mb-1"><strong>Stock:</strong> @product.Stock</p>
-                            
-                            <div class="text-warning">
-                                @for(int r = 0; r < Math.Round(product.Rating ?? 0); r++)
-                                {
-                                    <span>★</span>
-                                }
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            }
+    </div>
+    <div class="col-3">
+        <div class="product-item">
+            Rating
         </div>
-
-        <hr class="my-5" />
-
-        <h3 class="mb-3">Resumen Rápido</h3>
-        <table class="table table-hover border">
-            <thead class="table-dark">
-                <tr>
-                    <th>ID</th>
-                    <th>Producto</th>
-                    <th>Disponibilidad</th>
-                </tr>
-            </thead>
-            <tbody>
-                @while (i < listaProductos.Count && i < maximoMostrar)
-                {
-                    var p = listaProductos[i];
-                    <tr>
-                        <td>@p.Id</td>
-                        <td>@p.Name</td>
-                        <td>
-                            @if(p.Stock > 0) { 
-                                <span class="text-success">Stock: @p.Stock</span> 
-                            } else { 
-                                <span class="text-danger">Agotado</span> 
-                            }
-                        </td>
-                    </tr>
-                    i++;
-                }
-            </tbody>
-        </table>
-    }
+    </div>
+    <div class="col-3">
+        <div class="product-item">
+            Description
+        </div>
+    </div>
+    @foreach (var product in Model)
+    {
+        <div class="col-3">
+            <div class="product-item">
+                @product.CategoryId
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="product-item">
+                @product.Name
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="product-item">
+                @product.Rating
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="product-item">
+                @product.Description
+            </div>
+        </div>
+	}
 </div>

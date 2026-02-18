@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "O6vrD07E1sj7zyLCZlMqQ5kh+KF21ysamNB6TccdWDmxI9ozi5unAibuD/wBCBV1esPq0t8MzAvEYfvBqHP4Pg==",
+  "dgSpecHash": "9m6Yqv5SQxyfhGVke737Z3qoubhj/QkrfjUeVa5H27aJfoH6go04K3x/JJG/fJPXKo3VI2IJBSA8NAqWeJTPYg==",
   "success": true,
   "projectFilePath": "/home/jacob/APW/APW.Models/APW.Models.csproj",
   "expectedPackageFiles": [
-    "/home/jacob/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.22/microsoft.aspnetcore.app.ref.8.0.22.nupkg.sha512"
+    "/home/jacob/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.23/microsoft.aspnetcore.app.ref.8.0.23.nupkg.sha512"
   ],
   "logs": []
 }

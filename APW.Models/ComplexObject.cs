@@ -5,10 +5,7 @@ namespace APW.Models;
 public class ComplexObject
 {
     public string Identifier { get { return _uniqueIdentifier; } }
-
     private string _uniqueIdentifier { get; set; } = Guid.NewGuid().ToString();
-
-    public IEnumerable<IEntity> Entities { get; set; }
-
+    public IEnumerable<object> Entities { get; set; }
     public List<string> Errors { get; set; } = [];
 }
