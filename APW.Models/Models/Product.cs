@@ -24,8 +24,6 @@ public partial class Product : IEntity
 
     public string? ModifiedBy { get; set; }
 
-    public string? CreatedBy { get; set; }
-
     public virtual Category? Category { get; set; }
 
     public virtual Inventory? Inventory { get; set; }

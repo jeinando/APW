@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("APW.Architecture")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b3f7e83c4f23a3a4c6c0ab339fe4595fd5a7c020")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb40b0feaa1c46d3f82fe18e3f4e6d2b48b17ab8")]
 [assembly: System.Reflection.AssemblyProductAttribute("APW.Architecture")]
 [assembly: System.Reflection.AssemblyTitleAttribute("APW.Architecture")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

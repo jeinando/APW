@@ -1,7 +1,8 @@
-﻿using System;
+﻿using APW.Models;
+using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using APW.Models;
+
 namespace APW.Data.MSSQL;
 
 public partial class ProductDbContext : DbContext
@@ -17,11 +18,7 @@ public partial class ProductDbContext : DbContext
 
     public virtual DbSet<Category> Categories { get; set; }
 
-    public virtual DbSet<Component> Components { get; set; }
-
     public virtual DbSet<Inventory> Inventories { get; set; }
-
-    public virtual DbSet<Notification> Notifications { get; set; }
 
     public virtual DbSet<Product> Products { get; set; }
 
@@ -33,19 +30,15 @@ public partial class ProductDbContext : DbContext
 
     public virtual DbSet<User> Users { get; set; }
 
-    public virtual DbSet<UserAction> UserActions { get; set; }
-
-    public virtual DbSet<UserRole> UserRoles { get; set; }
-
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=localhost;Database=ProductDB;User Id=sa;Password=*APW1234;TrustServerCertificate=True;");
+        => optionsBuilder.UseSqlServer("Server=localhost,1433;Database=ProductDB;User Id=sa;Password=*APW1234;TrustServerCertificate=True;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Category>(entity =>
         {
-            entity.HasKey(e => e.CategoryId).HasName("PK__Categori__19093A2BC4129B9D");
+            entity.HasKey(e => e.CategoryId).HasName("PK__Categori__19093A2B4B112A34");
 
             entity.Property(e => e.CategoryId).HasColumnName("CategoryID");
             entity.Property(e => e.CategoryName).HasMaxLength(255);
@@ -54,23 +47,9 @@ public partial class ProductDbContext : DbContext
             entity.Property(e => e.ModifiedBy).HasMaxLength(255);
         });
 
-        modelBuilder.Entity<Component>(entity =>
-        {
-            entity.Property(e => e.Id)
-                .ValueGeneratedOnAdd()
-                .HasColumnType("numeric(18, 0)")
-                .HasColumnName("ID");
-            entity.Property(e => e.Content)
-                .HasMaxLength(100)
-                .HasColumnName("content");
-            entity.Property(e => e.Name)
-                .HasMaxLength(50)
-                .HasColumnName("name");
-        });
-
         modelBuilder.Entity<Inventory>(entity =>
         {
-            entity.HasKey(e => e.InventoryId).HasName("PK__Inventor__F5FDE6D3B65D4CCA");
+            entity.HasKey(e => e.InventoryId).HasName("PK__Inventor__F5FDE6D330A37FC1");
 
             entity.ToTable("Inventory");
 
@@ -81,31 +60,12 @@ public partial class ProductDbContext : DbContext
             entity.Property(e => e.UnitPrice).HasColumnType("decimal(10, 2)");
         });
 
-        modelBuilder.Entity<Notification>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("PK__Notifica__3213E83F19600593");
-
-            entity.Property(e => e.Id).HasColumnName("id");
-            entity.Property(e => e.CreatedAt)
-                .HasDefaultValueSql("(getdate())")
-                .HasColumnType("datetime")
-                .HasColumnName("created_at");
-            entity.Property(e => e.IsRead)
-                .HasDefaultValue(false)
-                .HasColumnName("is_read");
-            entity.Property(e => e.Message)
-                .HasMaxLength(255)
-                .HasColumnName("message");
-            entity.Property(e => e.UserId).HasColumnName("user_id");
-        });
-
         modelBuilder.Entity<Product>(entity =>
         {
-            entity.HasKey(e => e.ProductId).HasName("PK__Products__B40CC6EDB81E4E5A");
+            entity.HasKey(e => e.ProductId).HasName("PK__Products__B40CC6ED22E2B857");
 
             entity.Property(e => e.ProductId).HasColumnName("ProductID");
             entity.Property(e => e.CategoryId).HasColumnName("CategoryID");
-            entity.Property(e => e.CreatedBy).HasMaxLength(100);
             entity.Property(e => e.Description).HasMaxLength(1000);
             entity.Property(e => e.InventoryId).HasColumnName("InventoryID");
             entity.Property(e => e.LastModified).HasColumnType("datetime");
@@ -116,20 +76,20 @@ public partial class ProductDbContext : DbContext
 
             entity.HasOne(d => d.Category).WithMany(p => p.Products)
                 .HasForeignKey(d => d.CategoryId)
-                .HasConstraintName("FK__Products__Catego__4AB81AF0");
+                .HasConstraintName("FK__Products__Catego__00200768");
 
             entity.HasOne(d => d.Inventory).WithMany(p => p.Products)
                 .HasForeignKey(d => d.InventoryId)
-                .HasConstraintName("FK__Products__Invent__4BAC3F29");
+                .HasConstraintName("FK__Products__Invent__01142BA1");
 
             entity.HasOne(d => d.Supplier).WithMany(p => p.Products)
                 .HasForeignKey(d => d.SupplierId)
-                .HasConstraintName("FK__Products__Suppli__4CA06362");
+                .HasConstraintName("FK__Products__Suppli__02084FDA");
         });
 
         modelBuilder.Entity<Role>(entity =>
         {
-            entity.HasKey(e => e.RoleId).HasName("PK__Roles__8AFACE3AD4DF5701");
+            entity.HasKey(e => e.RoleId).HasName("PK__Roles__8AFACE3ACC640AFC");
 
             entity.Property(e => e.RoleId).HasColumnName("RoleID");
             entity.Property(e => e.RoleName).HasMaxLength(255);
@@ -137,7 +97,7 @@ public partial class ProductDbContext : DbContext
 
         modelBuilder.Entity<Supplier>(entity =>
         {
-            entity.HasKey(e => e.SupplierId).HasName("PK__Supplier__4BE66694E7CA739A");
+            entity.HasKey(e => e.SupplierId).HasName("PK__Supplier__4BE666941C11848D");
 
             entity.Property(e => e.SupplierId).HasColumnName("SupplierID");
             entity.Property(e => e.Address).HasMaxLength(1000);
@@ -153,7 +113,7 @@ public partial class ProductDbContext : DbContext
 
         modelBuilder.Entity<APW.Models.Task>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Tasks__3214EC07C7ED59B0");
+            entity.HasKey(e => e.Id).HasName("PK__Tasks__3214EC07C4C8D556");
 
             entity.Property(e => e.CreatedAt).HasColumnType("datetime");
             entity.Property(e => e.Description).HasMaxLength(1000);
@@ -166,7 +126,7 @@ public partial class ProductDbContext : DbContext
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.UserId).HasName("PK__Users__1788CCACB71C6624");
+            entity.HasKey(e => e.UserId).HasName("PK__Users__1788CCAC87ECE01F");
 
             entity.Property(e => e.UserId).HasColumnName("UserID");
             entity.Property(e => e.CreatedAt).HasColumnType("datetime");
@@ -174,34 +134,7 @@ public partial class ProductDbContext : DbContext
             entity.Property(e => e.LastModified).HasColumnType("datetime");
             entity.Property(e => e.ModifiedBy).HasMaxLength(255);
             entity.Property(e => e.PasswordHash).HasMaxLength(255);
-            entity.Property(e => e.RoleId).HasColumnName("RoleID");
             entity.Property(e => e.Username).HasMaxLength(255);
-        });
-
-        modelBuilder.Entity<UserAction>(entity =>
-        {
-            entity.HasNoKey();
-
-            entity.Property(e => e.Description)
-                .HasMaxLength(100)
-                .IsUnicode(false);
-            entity.Property(e => e.Id).HasColumnType("numeric(18, 0)");
-            entity.Property(e => e.Name)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-        });
-
-        modelBuilder.Entity<UserRole>(entity =>
-        {
-            entity.HasNoKey();
-
-            entity.Property(e => e.Id).HasColumnType("numeric(18, 0)");
-            entity.Property(e => e.RoldId)
-                .HasColumnType("numeric(18, 0)")
-                .HasColumnName("RoldID");
-            entity.Property(e => e.UserId)
-                .HasColumnType("numeric(18, 0)")
-                .HasColumnName("UserID");
         });
 
         OnModelCreatingPartial(modelBuilder);
