@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("APW.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb40b0feaa1c46d3f82fe18e3f4e6d2b48b17ab8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4df59000bff3caf738a71a964b7846444ccdf3d4")]
 [assembly: System.Reflection.AssemblyProductAttribute("APW.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("APW.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
