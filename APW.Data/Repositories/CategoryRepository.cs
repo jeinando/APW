@@ -16,6 +16,10 @@ public interface ICategoryRepository
     Task<bool> ExistsAsync(Category entity);
 }
 
-public class CategoryRepository(ProductDbContext context) : RepositoryBase<Category>(context), ICategoryRepository
+public class CategoryRepository : RepositoryBase<Category>, ICategoryRepository
 {
+    public CategoryRepository(ProductDbContext context) : base(context)
+    {
+   
+    }
 }

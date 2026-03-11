@@ -16,6 +16,9 @@ public interface IInventoryRepository
     Task<bool> ExistsAsync(Inventory entity);
 }
 
-public class InventoryRepository(ProductDbContext context) : RepositoryBase<Inventory>(context), IInventoryRepository
+public class InventoryRepository : RepositoryBase<Inventory>, IInventoryRepository
 {
+    public InventoryRepository(ProductDbContext context) : base(context)
+    {
+    }
 }

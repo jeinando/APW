@@ -1,4 +1,3 @@
-
 using APW.Data.MSSQL;
 using APW.Models;
 
@@ -16,6 +15,9 @@ public interface ISupplierRepository
     Task<bool> ExistsAsync(Supplier entity);
 }
 
-public class SupplierRepository(ProductDbContext context) : RepositoryBase<Supplier>(context), ISupplierRepository
+public class SupplierRepository : RepositoryBase<Supplier>, ISupplierRepository
 {
+    public SupplierRepository(ProductDbContext context) : base(context)
+    {
+    }
 }

@@ -11,4 +11,15 @@ public class ApiControllerBase : ControllerBase
        Entities = entities as IEnumerable<IEntity> ?? [],
        
    };
+
+
+    protected ComplexObject CreateComplexObject(bool result) => new()
+   {
+       Success = result,
+       Errors = [],
+       Entities = [],
+       
+   };  
 }
+
+

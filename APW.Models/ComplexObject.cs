@@ -3,7 +3,9 @@ using APW.Models.Entities;
 namespace APW.Models;
 
 public class ComplexObject
+
 {
+    public bool Success { get; set; } = true;
     public string Identifier { get { return _uniqueIdentifier; } }
     private string _uniqueIdentifier { get; set; } = Guid.NewGuid().ToString();
     public IEnumerable<object> Entities { get; set; }

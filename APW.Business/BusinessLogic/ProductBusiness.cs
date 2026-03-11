@@ -1,7 +1,7 @@
 ﻿using APW.Models;
 using APW.Data.Repositories;
 
-namespace APW.Business;
+namespace APW.Business.BusinessLogic;
 
 public interface IProductBusiness
 {

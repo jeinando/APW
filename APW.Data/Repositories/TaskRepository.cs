@@ -1,6 +1,7 @@
 
 using APW.Data.MSSQL;
 using APW.Models;
+using ModelsTask = APW.Models.Product.Task;
 
 namespace APW.Data.Repositories;
 
@@ -16,6 +17,9 @@ public interface ITaskRepository
     Task<bool> ExistsAsync(APW.Models.Task entity);
 }
 
-public class TaskRepository(ProductDbContext context) : RepositoryBase<APW.Models.Task>(context), ITaskRepository
+public class TaskRepository : RepositoryBase<ModelsTask>, ITaskRepository
 {
+    public TaskRepository(ProductDbContext context) : base(context)
+    {
+    }
 }
