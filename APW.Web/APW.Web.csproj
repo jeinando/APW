@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-APW.Web-51712555-8831-4683-80c6-8135f1a26bf7</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="9.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="9.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\APW.Architecture\APW.Architecture.csproj" />
+    <ProjectReference Include="..\APW.Core\APW.Core.csproj" />
+    <ProjectReference Include="..\APW.Models\APW.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\Foodbank\" />
+  </ItemGroup>
+
+</Project>

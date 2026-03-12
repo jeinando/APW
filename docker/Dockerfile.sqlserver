@@ -1,0 +1,17 @@
+FROM mcr.microsoft.com/mssql/server:2022-latest
+
+ENV ACCEPT_EULA=Y
+ENV SA_PASSWORD=PAW3@Password123
+ENV MSSQL_PID=Developer
+
+USER root
+
+COPY init-db.sh /docker-entrypoint-initdb.d/init-db.sh
+COPY productdb.sql /docker-entrypoint-initdb.d/productdb.sql
+COPY foodbank.sql /docker-entrypoint-initdb.d/foodbank.sql
+
+RUN chmod +x /docker-entrypoint-initdb.d/init-db.sh
+
+USER mssql
+
+CMD /bin/bash -c "/opt/mssql/bin/sqlservr & sleep 15 && /docker-entrypoint-initdb.d/init-db.sh && wait"

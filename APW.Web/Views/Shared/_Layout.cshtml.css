@@ -1,0 +1,145 @@
+﻿
+
+html {
+    font-size: 15px;
+}
+
+body {
+    background-color: #f4f6f9;
+    font-family: "Segoe UI", Roboto, sans-serif;
+    color: #2c3e50;
+}
+
+a {
+    color: #1b6ec2;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #0d4f9e;
+    text-decoration: underline;
+}
+
+
+.navbar {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+a.navbar-brand {
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+
+
+.btn {
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.btn-primary:hover {
+    background-color: #155a9c;
+    border-color: #134f8a;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-warning:hover,
+.btn-outline-danger:hover,
+.btn-outline-info:hover {
+    transform: translateY(-1px);
+}
+
+
+
+.card {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+
+
+.table {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table thead {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+.table tbody tr {
+    transition: all 0.2s ease-in-out;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f5f9;
+    transform: scale(1.01);
+}
+
+
+
+.badge {
+    padding: 6px 10px;
+    font-weight: 500;
+    border-radius: 6px;
+}
+
+
+
+.form-control,
+.form-select {
+    border-radius: 8px;
+    border: 1px solid #dcdcdc;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #1b6ec2;
+    box-shadow: 0 0 0 0.15rem rgba(27,110,194,0.15);
+}
+
+
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem 0;
+    background-color: #ffffff;
+    border-top: 1px solid #e5e5e5;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
